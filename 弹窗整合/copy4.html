@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="js/jQuery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+	</head>
+	<body>
+		<div class="add">增加</div>
+		<div class="box-mask"></div>
+			<div class="box-modal-lx">
+				<div class="modal-header">
+					<span class="line"></span>
+				    <h4 class="modal-title">
+				        申请标签
+				    </h4>
+					<button class="close">
+					    &times;
+					</button>
+				</div> <!--modal-header-->
+				<!-- 流程图 -->
+				<div class="process">
+					<img src="img/默认-水平2.png" />
+				</div>
+				<div class="modal-body">
+					<div class="form-content">
+						<form role="form" class="form">
+							<div class="form-group">
+								<label for="table" class="label">数据库表</label>
+								<select class="form-select-lx" id="table">
+									<option value="" style="display: none;" disabled selected>请选择</option>
+									<option value ="">数据源2</option>
+									<option value ="">数据源3</option>
+								</select>
+							</div>
+							<div class="form-group-desc">
+								<label class="label" for="desc">标签描述</label>
+								<textarea  class="form-control-desc" id="desc" placeholder="请输入"></textarea>
+							</div>
+						</form><!--form-content-->
+					</div><!--form-content-->
+				</div><!--modal-body-->
+				<div class="modal-footer">
+				    <button type="button" class="formBtn">
+				        保存
+					</button>
+				</div>
+			</div>
+			<script language="JavaScript">
+				$(document).ready(function(){
+				  // var boxGroupClass = $('.box-mask, .box-modal');
+				  $('.add').click(function(){
+				    $('.box-mask, .box-modal-lx').show();
+				  })
+				  $('.close').click(function(){
+				    $('.box-mask, .box-modal-lx').hide();
+				  })
+				  // onkeydown 事件会在用户按下一个键盘按键时发生。
+				  window.onkeydown = function (event){ // console.log(event);
+				    if(event.keyCode == 27){ // 如果键盘按下 ESC 同样退出
+				        $('.box-mask, .box-modal-lx').hide();
+				    }
+				  }
+				})
+			</script>
+		</body>
+	</body>
+</html>
