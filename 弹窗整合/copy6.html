@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>copy6</title>
+		<link rel="stylesheet" type="text/css" href="./css/label.css"/>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<script type="text/javascript" src="js/jQuery.min.js"></script>
+	</head>
+	<body>
+		<div class="add">增加</div>
+		
+		<!-- 阴影 -->
+		<div class="box-mask"></div>
+		<!-- copy6结果审核弹框 -->
+		<div class="test">
+			<div class="box-modal-ly">
+				<!-- 申请标签标题 -->
+				<div class="modal-header">
+					<span class="line"></span>
+					<h4 class="modal-title">
+						标签源验证
+					</h4>
+					<button class="close">
+						&times;
+					</button>
+				</div> <!--modal-header-->
+				<!-- 结果审核 -->
+ 				<div class="process" style="padding-left: 100px;">
+						<img src="img/默认-水平2.png" />
+				</div>
+				<!-- 表单内容 -->
+				<div class="result_info">
+					<div class="form_content">
+						<div class="center2">
+							<form  method="post" class="form">
+								<div class="form-group1">
+									<div class="left_group">
+										<label for="name" class="label-group">数据库表</label>
+										<select name="name" class="form-select"> 
+											<option value="" style="display: none;" disabled selected>请选择</option>
+											<option>表1</option>
+											<option>表2</option>
+										</select>
+									</div>
+									<div class="right_group">
+										<label for="" class="label-group">标签属性</label>
+										<div class="select_prop">
+											<div class="mui-input-row mui-radio ">
+												<input name="radio" type="radio" >
+												<label class="right_char">日标签</label>
+											</div>
+											<div class="mui-input-row mui-radio ">
+												<input name="radio" type="radio" >
+												<label class="right_char">月标签</label>
+											</div>
+										</div>
+									</div>
+								</div>         
+								
+								<div class="form-group1">
+									<div class="left_group">
+										<label for="" class="label-group">业务口径</label>
+										<input type="text" class="form-control1"  id="" name="" placeholder="请输入"/>
+									</div>
+									<div class="right_group">
+										<label for="" class="label-group">标签类别</label>
+										<select name="name" class="form-select">
+											<option value="" style="display: none;" disabled selected>请选择</option>
+											<option>类别1</option>
+											<option>类别2</option>
+										</select>
+									</div>
+								</div>
+								
+								<div class="form-group1">
+									<div class="left_group">
+										<label for="" class="label-group">标签名称</label>
+										<input type="text" class="form-control1"  id="" name="" placeholder="请输入"/>
+									</div>
+									<div class="right_group">
+										<label for="" class="label-group">标签编码</label>
+										<input type="text" class="form-control1"  id="" name="" placeholder="请输入"/>
+									</div>
+								</div>
+								
+								<div class="form-group2">
+									<label for="" class="label-group">标签描述</label>
+									<!-- <input  class="form-control2"  id="" name="" placeholder="请输入" /> -->
+									<textarea class="form-control2 style="width:600px; height:64px;" style="resize:none;" placeholder="请输入"></textarea>
+								</div>
+								
+								<div class="form-group2">
+									<label for="" class="label-group">过程明细</label>
+									<!-- <input  class="form-control2"  id="" name="" placeholder="请输入" /> -->
+									<textarea class="form-control2 style="width:600px; height:64px;" style="resize:none;" placeholder="请输入"></textarea>
+								</div>
+									
+								<div class="form-group3">
+									<label for="" class="label-group">标签描述</label>
+									<!-- <input class="form-control3" type="" name="" id="" value="" placeholder="请输入"/> -->
+									<textarea class="form-control3"  style="resize:none;" placeholder="请输入"></textarea>
+								</div>
+								
+								<div class="form-group4">
+									<label for="" class="label-group">是否通过</label>
+									<div class="right_group2">
+										
+											<div class="mui-input-row mui-radio2 ">
+												<input name="radio" type="radio" >
+												<label class="right_char">通过</label>
+											</div>
+											<div class="mui-input-row mui-radio2 ">
+												<input name="radio" type="radio" >
+												<label class="right_char">不通过</label>
+											</div>
+										
+									</div>
+								</div>
+								
+							</form>
+						</div>
+						
+					</div>
+				</div>
+				<!-- 保存按钮 -->
+				<div class="modal-footer">
+						<button type="button" class="formBtn">保存</button>
+				</div>
+			</div>
+		</div>
+	</body>
+   <script language="JavaScript">
+	$(document).ready(function(){
+	  // var boxGroupClass = $('.box-mask, .box-modal');
+	  $('.add').click(function(){
+		$('.box-mask, .test,.box-modal-ly').show();
+	  })
+	  $('.close').click(function(){
+		$('.box-mask,.test, .box-modal-ly').hide();
+	  })
+	  // onkeydown 事件会在用户按下一个键盘按键时发生。
+	  window.onkeydown = function (event){ // console.log(event);
+		if(event.keyCode == 27){ // 如果键盘按下 ESC 同样退出
+			$('.box-mask, .box-modal').hide();
+		}
+	  }
+	})
+   </script>
+	
+</html>
